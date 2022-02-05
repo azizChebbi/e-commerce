@@ -1,0 +1,121 @@
+.carousel-item {
+    img {
+        width: 100vw;
+        height: 390px;
+        object-fit: cover;
+    }
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.categorie {
+    width: 22%;
+    background-color: var(--primary-background);
+    box-shadow: var(--box-shadow);
+    padding: 10px 15px;
+    margin: 20px 0;
+    h2 {
+        padding: 5px 0;
+        color: var(--primary-text);
+    }
+    a {
+        text-decoration: none;
+        color: rgb(56, 56, 182);
+        font-weight: bold;
+    }
+    div {
+        position: relative;
+        height: 300px;
+        margin: 10px 0 20px 0;
+    }
+}
+.ads {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    margin: auto;
+    flex-wrap: wrap;
+    div {
+        width: 46%;
+        position: relative;
+        height: 300px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+.best-sells {
+    width: 90vw;
+    margin: 40px auto;
+    cursor: pointer;
+    h2 {
+        margin: 10px 0;
+        color: var(--primary-text);
+    }
+    .image-carousel {
+        background-color: white;
+        display: flex;
+        column-gap: 10px;
+        padding: 5px;
+        width: 100%;
+        overflow-x: scroll;
+        div {
+            flex-shrink: 0;
+            width: 250px;
+            height: 250px;
+            position: relative;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .categorie {
+        width: 32%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .categorie {
+        width: 48%;
+    }
+    .best-sells {
+        width: 95%;
+    }
+    .best-sells .image-carousel div {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .carousel-item img {
+        height: 300px;
+    }
+    .categorie {
+        width: 98%;
+        margin: 10px 0;
+    }
+    .ads div {
+        width: 90%;
+        height: 150px;
+    }
+    .best-sells {
+        margin: 20px auto;
+        h2 {
+            font-size: 17px;
+        }
+        .image-carousel div {
+            width: 170px;
+            height: 170px;
+        }
+    }
+}

@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+}
+.cart {
+    display: flex;
+    padding: 20px;
+    column-gap: 10px;
+
+    margin: 0;
+    flex: 1;
+
+    .cart-items {
+        background-color: var(--secondary-background);
+        border-radius: 10px;
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        min-height: 200px;
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            column-gap: 30px;
+            border-bottom: 1px solid #e4e4e4;
+            padding-bottom: 20px;
+            margin: 10px 20px;
+            & > div:first-child {
+                width: 220px;
+                height: 220px;
+                position: relative;
+            }
+            & > div:last-child {
+                line-height: 2;
+                & > p {
+                    font-weight: bold;
+                    line-height: 1.5;
+                    margin-bottom: 10px;
+                    color: var(--primary-text);
+                }
+                div {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 20px;
+                    margin-top: 5px;
+                    p {
+                        font-weight: bold;
+                        color: var(--primary-text);
+                    }
+                    select {
+                        border-radius: 4px;
+                        padding: 5px;
+                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    }
+                    button {
+                        margin-top: 10px;
+                        font-weight: bold;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+        .cart-empty {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            div {
+                text-align: center;
+                h1 {
+                    margin: 10px;
+                    color: var(--primary-text);
+                }
+                a {
+                    font-weight: bold;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    .cart-payment {
+        flex-grow: 2;
+        background-color: var(--secondary-background);
+        border-radius: 10px;
+        padding: 10px;
+        height: max-content;
+        & > * {
+            border-bottom: 1px solid #e4e4e4;
+        }
+        h2 {
+            font-size: 20px;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            margin: 10px 0;
+            padding-bottom: 10px;
+            color: var(--primary-text);
+        }
+        & > p {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 600;
+            margin-bottom: 5px;
+            padding-bottom: 10px;
+            color: var(--secondary-text);
+        }
+        .payment-section {
+            padding: 30px 10;
+            margin-bottom: 15px;
+            line-height: 2;
+            p {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-weight: 600;
+                color: var(--primary2-text);
+            }
+        }
+        button {
+            width: 100%;
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-size: 12px;
+            border: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .cart {
+        .cart-items {
+            .cart-item > div:first-child {
+                width: 230px;
+                height: 200px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .cart {
+        flex-direction: column-reverse;
+        .cart-items {
+            width: 100%;
+        }
+        .cart-payment {
+            width: 50%;
+            margin: auto;
+            margin-bottom: 15px;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .cart {
+        .cart-items {
+            .cart-item > div:first-child {
+                width: 200px;
+                height: 150px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .cart {
+        .cart-items {
+            .cart-item {
+                column-gap: 10px;
+                & > div:first-child {
+                    width: 150px;
+                    height: 100px;
+                }
+                & > div:last-child {
+                    p {
+                        font-size: 12px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+        .cart-payment {
+            width: 70%;
+            padding: 3px;
+            h2 {
+                font-size: 17px;
+                margin: 5px 0;
+                padding-bottom: 5px;
+            }
+            .payment-section {
+                padding: 10px 10px;
+                line-height: 1.5;
+            }
+            button {
+                margin: 5px auto;
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    .cart {
+        .cart-items {
+            .cart-item {
+                column-gap: 5px;
+                padding-bottom: 5px;
+                margin: 5px;
+                & > div:first-child {
+                    width: 300px;
+                    height: 100px;
+                }
+                & > div:last-child {
+                    line-height: 1;
+                    & > p {
+                        line-height: 1.2;
+                        margin-bottom: 5px;
+                    }
+                    div {
+                        margin-top: 5px;
+                        button {
+                            margin-top: 3px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+        .cart-payment {
+            width: 95%;
+        }
+    }
+}
