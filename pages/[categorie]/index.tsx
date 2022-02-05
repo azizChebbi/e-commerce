@@ -6,7 +6,6 @@ import Layout from "../../containers/Layout";
 import { categories } from "../../utils/data";
 import Rating from "@mui/material/Rating";
 import Product from "../../components/categorie/Product";
-import { useRouter } from "next/router";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
 import FilterListOutlinedIcon from "@mui/icons-material/FilterListOutlined";
 

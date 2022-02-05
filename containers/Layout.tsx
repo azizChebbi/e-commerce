@@ -23,7 +23,7 @@ const Layout = ({ children, title }: AppProps) => {
         <>
             <div className='app' data-theme={theme}>
                 <Head>
-                    <title>{title}</title>
+                    <title>{"Mally"}</title>
                 </Head>
                 <Header />
                 <div>{children}</div>
