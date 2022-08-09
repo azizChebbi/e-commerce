@@ -102,7 +102,7 @@ function Cart() {
                             text={`Total(${state.cart.length} item${
                                 state.cart.length > 1 ? "s" : ""
                             })`}
-                            val={Number(((30 * totalPrice) / 44).toFixed(2))}
+                            val={Number(((18 * totalPrice) / 22).toFixed(2))}
                         />
                         <Button variant='contained' color='warning'>
                             Proceed To Checkout

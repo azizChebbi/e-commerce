@@ -5,8 +5,8 @@
     display: flex;
     padding: 20px;
     column-gap: 10px;
-
-    margin: 0;
+    width : 70vw ;
+    margin: auto;
     flex: 1;
 
     .cart-items {
@@ -130,6 +130,7 @@
 
 @media screen and (max-width: 1000px) {
     .cart {
+        width: 100% ;
         .cart-items {
             .cart-item > div:first-child {
                 width: 230px;
